@@ -11,6 +11,6 @@ docker build -t docker-fpm-nextcloud .
 ## Run container
 
 ``bash
-docker run --rm --name my-nextcloud-dev -v `pwd`/nextcloud-server:/srv/www -i -t docker-fpm-nextcloud
+docker run --rm --name my-nextcloud-dev -p 9000:9000 -v `pwd`/nextcloud-server:/srv/www -i -t docker-fpm-nextcloud
 ```
 
