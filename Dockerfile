@@ -1,4 +1,4 @@
-FROM sunfoxcz/baseimage:0.10.1
+FROM phusion/baseimage:0.9.19
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
