@@ -16,3 +16,14 @@ This repos is lacking some serious docs. Basic idea is to clone Nextcloud into `
 docker run --rm --name my-nextcloud-dev -p 9000:9000 -v `pwd`/nextcloud-server:/srv/www -i -t docker-fpm-nextcloud
 ```
 
+## Permissions
+
+Nextcloud needs write permissions to certain folders. When using the volume
+mount this can be easily archived with the following insecure commands.
+
+```bash
+chmod -R 777 nextcloud-server/config/
+chmod -R 777 nextcloud-server/data/
+```
+
+This makes stuff world writable - do not use on production machines!
